@@ -5,9 +5,9 @@ const connection = require('../database/connection');
 module.exports = {
     // Listagem de ongs
     async index (request, response) {
-        const ongs = await connection('ongs').select('*');
+        const ong = await connection('ongs').select('*');
     
-        return response.json(ongs);
+        return response.json(ong);
     },
     //Cadastro de ongs
     async create(request, response) {
